@@ -9,6 +9,7 @@ CONVERSOR DE UNIDADES DE POTÊNCIA
 
 void ConversorPotencia();
 void WattsKilowatts(float watts);
+void KillowattsWatts(float kilowatts);
 
 int main(){
     
@@ -21,7 +22,7 @@ int main(){
 void ConversorPotencia(){
     int opcao;
 
-    float watts; 
+    float valor; 
 
     printf("\nQual conversao deseja realizar:\n");
     printf("\n1 - Watts (W) --> Quilowatts (kW)\n");
@@ -34,8 +35,17 @@ void ConversorPotencia(){
     switch(opcao){
         case 1:
             printf("\nInforme o valor em Watts: ");
-            scanf("%f", &watts);
-            WattsKilowatts(watts);
+            scanf("%f", &valor);
+            WattsKilowatts(valor);
+            break;
+        case 2:
+            printf("\nInforme o valor em Kilowatss: ");
+            scanf("%f", &valor);
+            KillowattsWatts(valor);
+            break;
+        default:
+            printf("Entrada Invalida!");
+
     }
 }
 
@@ -44,4 +54,9 @@ void ConversorPotencia(){
 void WattsKilowatts(float watts){
     float conversao = watts / 1000;
     printf("%.2f Watts (W) equivale a %.2f Quilowatts (kW)\n", watts, conversao);
+}
+
+void KillowattsWatts(float kilowatts){
+    float conversao = kilowatts * 1000;
+     printf("%.2f Quilowatts (Kw) equivale a %.2f Watss (W)\n", kilowatts, conversao);
 }
