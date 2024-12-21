@@ -9,3 +9,8 @@ void mililitrosParaOutros(double mililitros) {
     printf("- %.2f litros\n", mililitros / 1000);
     printf("- %.9f metros cúbicos\n", mililitros / 1000000);
 }
+void metrosCubicosParaOutros(double metrosCubicos) {
+    printf("\n%.6f metros cúbicos equivalem a:\n", metrosCubicos);
+    printf("- %.2f litros\n", metrosCubicos * 1000);
+    printf("- %.2f mililitros\n", metrosCubicos * 1000000);
+}
