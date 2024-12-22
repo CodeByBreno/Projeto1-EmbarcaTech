@@ -11,7 +11,7 @@ void WattsKilowatts(float watts);
 void KillowattsWatts(float kilowatts);
 void WattsCv(float watts);
 void KilowattsCv(float kilowatts);
-void tratarEntrada(float valor);
+int tratarEntrada(float valor);
 
 int main(){
 
@@ -21,12 +21,12 @@ int main(){
 }
 
 
-void ConversorPotencia(){
+void ConversorPotencia() {
     int opcao;
+    float valor;
+    int valorValido;
 
-    float valor; 
-
-    do{
+    do {
         printf("\nQual conversao deseja realizar:\n");
         printf("\n1 - Watts (W) --> Quilowatts (kW)\n");
         printf("2 - Quilowatts (kW) -->  Watts (W)\n");
@@ -35,38 +35,50 @@ void ConversorPotencia(){
         printf("\nDigite a opcao desejada: ");
         scanf("%d", &opcao);
 
-        switch(opcao){
+        switch (opcao) {
             case 1:
-                printf("\nInforme o valor em Watts: ");
-                scanf("%f", &valor);
+                do {
+                    printf("\nInforme o valor em Watts: ");
+                    scanf("%f", &valor);
+                    valorValido = tratarEntrada(valor);
+                } while (!valorValido); 
                 WattsKilowatts(valor);
                 break;
-            
+
             case 2:
-                printf("\nInforme o valor em Kilowatss: ");
-                scanf("%f", &valor);
+                do {
+                    printf("\nInforme o valor em Kilowatts: ");
+                    scanf("%f", &valor);
+                    valorValido = tratarEntrada(valor);
+                } while (!valorValido);
                 KillowattsWatts(valor);
                 break;
-            
-            case 3: 
-                printf("\nInforme o valor em Watts: ");
-                scanf("%f", &valor);
+
+            case 3:
+                do {
+                    printf("\nInforme o valor em Watts: ");
+                    scanf("%f", &valor);
+                    valorValido = tratarEntrada(valor);
+                } while (!valorValido);
                 WattsCv(valor);
                 break;
-            
-            case 4: 
-                printf("\nInforme o valor em Kilowatts: ");
-                scanf("%f", &valor);
+
+            case 4:
+                do {
+                    printf("\nInforme o valor em Kilowatts: ");
+                    scanf("%f", &valor);
+                    valorValido = tratarEntrada(valor);
+                } while (!valorValido);
                 KilowattsCv(valor);
                 break;
 
             default:
-                printf("Entrada Invalida!. Por favor escolha uma das Conversoes Indicadas!\n");
+                printf("Entrada invalida! Por favor, escolha uma das conversoes indicadas.\n");
                 break;
         }
-    } while (opcao < 1 || opcao > 4);
-    
+    } while (opcao < 1 || opcao > 4); 
 }
+
 
 // Funções de Conversões das Unidades
 
@@ -93,7 +105,7 @@ void KilowattsCv(float kilowatts){
 
 // Função para tratar o valor digitado
 
-void tratarEntrada(float valor){
+int tratarEntrada(float valor){
     if(valor < 0){
         printf("Valor Invalido para conversao. Digite um valor maior que zero!!");
         return 0; // Indica que o valor é inválido
