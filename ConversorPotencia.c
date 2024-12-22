@@ -32,9 +32,16 @@ void ConversorPotencia() {
         printf("2 - Quilowatts (kW) -->  Watts (W)\n");
         printf("3 - Watts (W) -->  Cavalos-Vapor (Cv)\n");
         printf("4 - Quilowatts (kW) -->  Cavalos-Vapor (Cv)\n");
-        printf("\nDigite a opcao desejada: ");
+        printf("0 - Sair");
+
+        printf("\n\nDigite a opcao desejada: ");
         scanf("%d", &opcao);
 
+        if (opcao == 0){
+            printf("Programa Encerrado!!");
+            break;
+        }
+    
         switch (opcao) {
             case 1:
                 do {
@@ -76,9 +83,8 @@ void ConversorPotencia() {
                 printf("Entrada invalida! Por favor, escolha uma das conversoes indicadas.\n");
                 break;
         }
-    } while (opcao < 1 || opcao > 4); 
+    } while (opcao < 0 || opcao > 4); 
 }
-
 
 // Funções de Conversões das Unidades
 
@@ -89,7 +95,7 @@ void WattsKilowatts(float watts){
 
 void KillowattsWatts(float kilowatts){
     float conversao = kilowatts * 1000;
-    printf("%.2f Quilowatts (Kw) equivale a %.3f Watss (W)\n", kilowatts, conversao);
+    printf("%.2f Quilowatts (Kw) equivale a %.3f Wattss (W)\n", kilowatts, conversao);
 }
 
 void WattsCv(float watts){
