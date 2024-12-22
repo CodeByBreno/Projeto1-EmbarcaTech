@@ -11,9 +11,10 @@ void WattsKilowatts(float watts);
 void KillowattsWatts(float kilowatts);
 void WattsCv(float watts);
 void KilowattsCv(float kilowatts);
+void tratarEntrada(float valor);
 
 int main(){
-    
+
     ConversorPotencia();
 
     return 0;
@@ -88,4 +89,15 @@ void KilowattsCv(float kilowatts){
     float conversao =  (kilowatts * 1000) / 735.5;
     printf("%.2f Kilowatts (Kw) equivale a %.3f Cavalo-Vapor (Cv)\n", kilowatts, conversao);
 
+}
+
+// Função para tratar o valor digitado
+
+void tratarEntrada(float valor){
+    if(valor < 0){
+        printf("Valor Invalido para conversao. Digite um valor maior que zero!!");
+        return 0; // Indica que o valor é inválido
+    }else{
+        return 1; // Indica que o valor é válido 
+    }
 }
