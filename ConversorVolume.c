@@ -1,4 +1,5 @@
 #include <stdio.h>
+
 void litrosParaOutros(double litros)
 {
     printf("\n%.2f litros equivalem a:\n", litros);
@@ -29,40 +30,31 @@ int conversorVolume()
     printf("3 - Metros Cúbicos para Litros e Mililitros\n");
     printf("0 - Sair\n");
 
-    while (1)
+    printf("\nDigite sua opcao: ");
+    scanf("%d", &opcao);
+
+    switch (opcao)
     {
-        printf("\nDigite sua opcao: ");
-        scanf("%d", &opcao);
+    case 1:
+        printf("Digite o valor em litros: ");
+        scanf("%lf", &valor);
+        litrosParaOutros(valor);
+        break;
 
-        if (opcao == 0)
-        {
-            printf("Encerrando o programa...\n");
-            break;
-        }
+    case 2:
+        printf("Digite o valor em mililitros: ");
+        scanf("%lf", &valor);
+        mililitrosParaOutros(valor);
+        break;
 
-        switch (opcao)
-        {
-        case 1:
-            printf("Digite o valor em litros: ");
-            scanf("%lf", &valor);
-            litrosParaOutros(valor);
-            break;
+    case 3:
+        printf("Digite o valor em metros cúbicos: ");
+        scanf("%lf", &valor);
+        metrosCubicosParaOutros(valor);
+        break;
 
-        case 2:
-            printf("Digite o valor em mililitros: ");
-            scanf("%lf", &valor);
-            mililitrosParaOutros(valor);
-            break;
-
-        case 3:
-            printf("Digite o valor em metros cúbicos: ");
-            scanf("%lf", &valor);
-            metrosCubicosParaOutros(valor);
-            break;
-
-        default:
-            printf("Opcao invalida. Tente novamente.\n");
-        }
+    default:
+        printf("Opcao invalida\n");
     }
 
     return 0;
