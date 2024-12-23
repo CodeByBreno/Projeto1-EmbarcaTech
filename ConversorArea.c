@@ -12,7 +12,7 @@ float convertArea(float value, int type)
     };
 }
 
-void ConversorArea()
+void conversorArea()
 {
     int option;
     float value, result;

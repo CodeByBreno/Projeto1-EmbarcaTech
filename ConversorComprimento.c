@@ -1,7 +1,3 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <math.h>
-
 int selecionarUnidade()
 {
     int unidade;
@@ -19,10 +15,10 @@ int selecionarUnidade()
 
 float convertLength(float value, int originalUnit, int conversionUnit)
 {
-    return value * pow(10, originalUnit - conversionUnit);
+    return value * pow(10, conversionUnit - originalUnit);
 }
 
-void ConversorComprimento()
+void conversorComprimento()
 {
     system("cls");
 
