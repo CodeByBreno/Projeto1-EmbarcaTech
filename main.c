@@ -7,6 +7,7 @@
 #include "ConversorArea.c"
 #include "ConversorVolume.c"
 #include "ConversorPotencia.c"
+#include "ConversorVelocidade.c"
 
 int running = 1;
 int convertionOption = 0;
@@ -40,6 +41,7 @@ void selectConvertion()
     case 4:
         break;
     case 5:
+        conversorVelocidade();
         break;
     case 6:
         conversorPotencia();
@@ -48,6 +50,7 @@ void selectConvertion()
         conversorArea();
         break;
     default:
+        printf("Opção inválida!\n");
         break;
     }
 }
@@ -55,11 +58,15 @@ void selectConvertion()
 void menuExit()
 {
     char answer;
-    printf("Deseja realizar outra conversão? [Y/n]\n");
+    printf("\nDeseja realizar outra conversão? [Y/n]\n");
     scanf(" %c", &answer);
     if (answer != 'Y')
     {
         running = 0;
+    }
+    else
+    {
+        system("cls");
     }
 }
 
