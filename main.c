@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
+#include <locale.h>
 
 #include "ConversorComprimento.c"
 #include "ConversorArea.c"
@@ -35,6 +36,8 @@ void menuExit()
 
 int main()
 {
+    setlocale(LC_ALL, "Portuguese");
+
     while (running)
     {
         menuConvertion();
