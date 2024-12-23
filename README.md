@@ -15,10 +15,15 @@ Agradecimentos aos devs que participaram:
 
 ## Imagens do projeto:
 
-<p align="center">
-<img src="https://github.com/user-attachments/assets/12eeede6-ec08-4ed3-a7ca-7570ca62df52" width=480>
-<img src="https://github.com/user-attachments/assets/5be02f11-6fe6-430e-9b7c-cda90efa9370" width=470>
-</p>
+<div align="center">
+<img src="https://github.com/user-attachments/assets/12eeede6-ec08-4ed3-a7ca-7570ca62df52" width=600>
+<p><strong>Figura 1.</strong> Fluxo de commits e merges</p>
+</div>
+
+<div align="center">
+<img src="https://github.com/user-attachments/assets/5be02f11-6fe6-430e-9b7c-cda90efa9370" width=600>
+<p><strong>Figura 2.</strong> Interface Inicial da aplicaçãos</p>
+</div>
 
 ## Especificações do Projeto:
 <a href="https://github.com/user-attachments/files/18230334/Tarefa3.-.Depuracao.e.Versionamento.pdf">
