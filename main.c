@@ -23,6 +23,7 @@ void menuConvertion()
     printf("5. Unidades de velocidade (km/h, m/s, mph)\n");
     printf("6. Unidades de potencia Watts (W), quilowatts (kW), cavalos-vapor (cv ou hp)\n");
     printf("7. Unidades de area (metro quadrado, centimetro quadrado)\n");
+    printf("8. Unidades de tempo (segundos, minutos, horas)\n");
 
     scanf("%d", &convertionOption);
 }
@@ -35,6 +36,7 @@ void selectConvertion()
         conversorComprimento();
         break;
     case 2:
+        printf("Em desenvolvimento...\n");
         break;
     case 3:
         conversorVolume();
@@ -51,6 +53,9 @@ void selectConvertion()
     case 7:
         conversorArea();
         break;
+    case 8:
+        printf("Em desenvolvimento...\n");
+        break;
     default:
         printf("Opcao invalida!\n");
         break;
@@ -66,10 +71,6 @@ void menuExit()
     {
         running = 0;
     }
-    else
-    {
-        system("cls");
-    }
 }
 
 int main()
@@ -81,6 +82,7 @@ int main()
         menuConvertion();
         selectConvertion();
         menuExit();
+        system("cls");
     }
     printf("[SUCESS] Aplicacao encerrada com sucesso");
     return 0;
