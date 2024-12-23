@@ -4,7 +4,7 @@ CONVERSOR DE UNIDADES DE POTÊNCIA
 
 */
 
-void ConversorPotencia();
+void conversorPotencia();
 void WattsKilowatts(float watts);
 void KillowattsWatts(float kilowatts);
 void WattsCv(float watts);
