@@ -1,5 +1,21 @@
 #include <stdio.h>
 
+char *unidadeTemperatura(int value)
+{
+    switch (value)
+    {
+    case 1:
+        return "°C";
+    case 2:
+        return "°F";
+    case 3:
+        return "K";
+    default:
+        printf("[ERROR] Invalid temperature type\n");
+        break;
+    }
+}
+
 void conversorTemperatura()
 {
     int unidade_origem, unidade_destino;
@@ -25,7 +41,7 @@ void conversorTemperatura()
 
     if (unidade_origem == unidade_destino)
     {
-        printf("\nA unidade de origem e destino são iguais. O valor permanece: %.2f\n", temperatura);
+        printf("\nA unidade de origem e destino são iguais. O valor permanece: %.2f %s\n", temperatura, unidadeTemperatura(unidade_origem));
         return;
     }
 
@@ -66,7 +82,8 @@ void conversorTemperatura()
         return;
     }
 
-    printf("\nResultado: %.2f\n", resultado);
+    printf("\nResultado: %.2f %s\n", resultado, unidadeTemperatura(unidade_destino));
+    printf("(valor original: %.2f %s)", temperatura, unidadeTemperatura(unidade_origem));
 }
 
 // int main()

@@ -22,7 +22,7 @@ void conversorComprimento()
 {
     system("cls");
 
-    int UnidadeInicial = 0, UnidadeConversao = 0, opcao = 0;
+    int UnidadeInicial = 0, UnidadeConversao = 0;
     float ValorInicial = 0.0, resultado;
 
     do

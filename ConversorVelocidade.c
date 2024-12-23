@@ -2,7 +2,7 @@
     Conversor de Velocidade
 */
 
-char *unidade(int value)
+char *unidadeVelocidade(int value)
 {
     switch (value)
     {
@@ -79,8 +79,8 @@ int conversorVelocidade()
         return 1;
     }
 
-    printf("O valor convertido é: %.2f %s\n", resultado, unidade(saida));
-    printf("(convertido de %.2f %s)\n", velocidade, unidade(entrada));
+    printf("O valor convertido é: %.2f %s\n", resultado, unidadeVelocidade(saida));
+    printf("(convertido de %.2f %s)\n", velocidade, unidadeVelocidade(entrada));
 
     return 0;
 }

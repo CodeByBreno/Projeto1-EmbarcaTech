@@ -4,10 +4,11 @@
 #include <locale.h>
 
 #include "ConversorComprimento.c"
-#include "ConversorArea.c"
 #include "ConversorVolume.c"
-#include "ConversorPotencia.c"
+#include "ConversorTemperatura.c"
 #include "ConversorVelocidade.c"
+#include "ConversorPotencia.c"
+#include "ConversorArea.c"
 
 int running = 1;
 int convertionOption = 0;
@@ -39,6 +40,7 @@ void selectConvertion()
         conversorVolume();
         break;
     case 4:
+        conversorTemperatura();
         break;
     case 5:
         conversorVelocidade();
