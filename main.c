@@ -5,6 +5,7 @@
 
 #include "ConversorComprimento.c"
 #include "ConversorArea.c"
+#include "ConversorVolume.c"
 #include "ConversorPotencia.c"
 
 int running = 1;
@@ -34,6 +35,7 @@ void selectConvertion()
     case 2:
         break;
     case 3:
+        conversorVolume();
         break;
     case 4:
         break;
