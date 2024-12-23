@@ -6,6 +6,7 @@ float ValorInicial = 0.0, resultado;
 
 void converter_Unidade_De_Comprimento()
 {
+    system("cls");
 
     printf("Selecione a unidade do valor original:\n");
     printf("1 - Quilometro (Km)\n");
@@ -19,7 +20,15 @@ void converter_Unidade_De_Comprimento()
 
     while (UnidadeInicial < 1 || UnidadeInicial > 7)
     {
-        printf("Valor invalido tente novamente\n");
+        system("cls");
+        printf("Opcao invalida tente novamente\n");
+        printf("1 - Quilometro (Km)\n");
+        printf("2 - Hectômetro (Hm)\n");
+        printf("3 - Decâmetro (Dam)\n");
+        printf("4 - Metro (m)\n");
+        printf("5 - Decimetro (dm)\n");
+        printf("6 - Centimetro (cm)\n");
+        printf("7 - Milimetro (mm)\n");
         scanf("%d", &UnidadeInicial);
     }
 
@@ -30,6 +39,7 @@ void converter_Unidade_De_Comprimento()
 
     while (ValorInicial <= 0)
     {
+        system("cls");
         printf("Valor nulo ou invalido tente novamente: ");
         scanf("%f", &ValorInicial);
     }
@@ -48,13 +58,22 @@ void converter_Unidade_De_Comprimento()
 
     while (UnidadeConversao < 1 || UnidadeConversao > 7)
     {
-        printf("Valor invalido tente novamente\n");
+        system("cls");
+        printf("Opcao invalida tente novamente\n");
+        printf("1 - Quilometro (Km)\n");
+        printf("2 - Hectômetro (Hm)\n");
+        printf("3 - Decâmetro (Dam)\n");
+        printf("4 - Metro (m)\n");
+        printf("5 - Decimetro (dm)\n");
+        printf("6 - Centimetro (cm)\n");
+        printf("7 - Milimetro (mm)\n");
+       
         scanf("%d", &UnidadeConversao);
     }
 
     if (UnidadeInicial == UnidadeConversao)
     {
-        printf("\nA unidade inicial e final são iguais. Portanto o valor se mantem %d\n", ValorInicial);
+        printf("\nA unidade inicial e final são iguais. Portanto o valor se mantem %f\n", ValorInicial);
         return;
     }
     switch (UnidadeInicial)
@@ -226,10 +245,10 @@ void converter_Unidade_De_Comprimento()
     printf("Numero final: %f\n", resultado);
 }
 
-int main()
+/*int main() Menu usado para testes individuais da função
 {
     do
-    {
+    {   
         printf("\nMenu Principal Conversor Unidade de Comprimento\n");
         printf("1. Converter Unidade de Comprimento\n");
         printf("2. Sair\n");
@@ -251,4 +270,5 @@ int main()
     } while (opcao != 2);
 
     return 0;
-}
+} */
+
