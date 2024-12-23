@@ -2,8 +2,8 @@ int selecionarUnidade()
 {
     int unidade;
     printf("1 - Quilometro (Km)\n");
-    printf("2 - Hectômetro (Hm)\n");
-    printf("3 - Decâmetro (Dam)\n");
+    printf("2 - Hectometro (Hm)\n");
+    printf("3 - Decametro (Dam)\n");
     printf("4 - Metro (m)\n");
     printf("5 - Decimetro (dm)\n");
     printf("6 - Centimetro (cm)\n");

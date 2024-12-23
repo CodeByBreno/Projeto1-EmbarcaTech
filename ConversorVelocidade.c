@@ -28,14 +28,14 @@ int conversorVelocidade()
     printf("1. km/h\n");
     printf("2. m/s\n");
     printf("3. mph\n");
-    printf("Opção: ");
+    printf("Opcao: ");
     scanf("%d", &entrada);
 
-    printf("\nSelecione a unidade de saída: \n");
+    printf("\nSelecione a unidade de saida: \n");
     printf("1. km/h\n");
     printf("2. m/s\n");
     printf("3. mph\n");
-    printf("Opção: ");
+    printf("Opcao: ");
     scanf("%d", &saida);
 
     printf("\nValor da velocidade: ");
@@ -75,11 +75,11 @@ int conversorVelocidade()
             break;
         }
     default:
-        printf("Entrada inválida!\n");
+        printf("Entrada invalida!\n");
         return 1;
     }
 
-    printf("O valor convertido é: %.2f %s\n", resultado, unidadeVelocidade(saida));
+    printf("O valor convertido eh: %.2f %s\n", resultado, unidadeVelocidade(saida));
     printf("(convertido de %.2f %s)\n", velocidade, unidadeVelocidade(entrada));
 
     return 0;

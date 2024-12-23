@@ -5,9 +5,9 @@ char *unidadeTemperatura(int value)
     switch (value)
     {
     case 1:
-        return "°C";
+        return "oC";
     case 2:
-        return "°F";
+        return "oF";
     case 3:
         return "K";
     default:
@@ -26,14 +26,14 @@ void conversorTemperatura()
     printf("1. Celsius\n");
     printf("2. Fahrenheit\n");
     printf("3. Kelvin\n");
-    printf("Opção: ");
+    printf("Opcao: ");
     scanf("%d", &unidade_origem);
 
     printf("\nEscolha a unidade de destino:\n");
     printf("1. Celsius\n");
     printf("2. Fahrenheit\n");
     printf("3. Kelvin\n");
-    printf("Opção: ");
+    printf("Opcao: ");
     scanf("%d", &unidade_destino);
 
     printf("\nDigite o valor da temperatura: ");
@@ -41,7 +41,7 @@ void conversorTemperatura()
 
     if (unidade_origem == unidade_destino)
     {
-        printf("\nA unidade de origem e destino são iguais. O valor permanece: %.2f %s\n", temperatura, unidadeTemperatura(unidade_origem));
+        printf("\nA unidade de origem e destino sao iguais. O valor permanece: %.2f %s\n", temperatura, unidadeTemperatura(unidade_origem));
         return;
     }
 
@@ -78,7 +78,7 @@ void conversorTemperatura()
         }
         break;
     default:
-        printf("\nUnidade de origem inválida!\n");
+        printf("\nUnidade de origem invalida!\n");
         return;
     }
 
@@ -95,7 +95,7 @@ void conversorTemperatura()
 //         printf("\nMenu Principal\n");
 //         printf("1. Converter temperatura\n");
 //         printf("2. Sair\n");
-//         printf("Escolha uma opção: ");
+//         printf("Escolha uma opcao: ");
 //         scanf("%d", &opcao);
 
 //         switch (opcao)
@@ -107,7 +107,7 @@ void conversorTemperatura()
 //             printf("\nEncerrando o programa.\n");
 //             break;
 //         default:
-//             printf("\nOpção inválida! Tente novamente.\n");
+//             printf("\nOpcao invalida! Tente novamente.\n");
 //         }
 //     } while (opcao != 2);
 

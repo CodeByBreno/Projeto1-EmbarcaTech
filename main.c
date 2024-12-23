@@ -16,13 +16,13 @@ int convertionOption = 0;
 void menuConvertion()
 {
     printf("Escolha o tipo de conversão que deseja fazer: \n");
-    printf("1. Unidades de comprimento (metro, centímetro, milímetro)\n");
+    printf("1. Unidades de comprimento (metro, centimetro, milimetro)\n");
     printf("2. Unidades de massa (quilograma, grama, tonelada)\n");
-    printf("3. Unidades de volume (litro, mililitro, metros cúbicos)\n");
+    printf("3. Unidades de volume (litro, mililitro, metros cubicos)\n");
     printf("4. Unidades de temperatura (Celsius, Fahrenheit, Kelvin)\n");
     printf("5. Unidades de velocidade (km/h, m/s, mph)\n");
     printf("6. Unidades de potencia Watts (W), quilowatts (kW), cavalos-vapor (cv ou hp)\n");
-    printf("7. Unidades de área (metro quadrado, centímetro quadrado)\n");
+    printf("7. Unidades de area (metro quadrado, centimetro quadrado)\n");
 
     scanf("%d", &convertionOption);
 }
@@ -52,7 +52,7 @@ void selectConvertion()
         conversorArea();
         break;
     default:
-        printf("Opção inválida!\n");
+        printf("Opcao invalida!\n");
         break;
     }
 }
@@ -60,7 +60,7 @@ void selectConvertion()
 void menuExit()
 {
     char answer;
-    printf("\nDeseja realizar outra conversão? [Y/n]\n");
+    printf("\nDeseja realizar outra conversao ? [Y/n]\n");
     scanf(" %c", &answer);
     if (answer != 'Y')
     {
@@ -74,7 +74,7 @@ void menuExit()
 
 int main()
 {
-    setlocale(LC_ALL, "Portuguese");
+    setlocale(LC_ALL, "");
 
     while (running)
     {
@@ -82,6 +82,6 @@ int main()
         selectConvertion();
         menuExit();
     }
-    printf("[SUCESS] Aplicação encerrada com sucesso");
+    printf("[SUCESS] Aplicacao encerrada com sucesso");
     return 0;
 }
