@@ -84,8 +84,10 @@ void conversorPotencia()
             break;
         }
 
+        while ((getchar()) != '\n')
+            ;
         printf("Digite algo para continuar...\n");
-        scanf("%c", &lixo);
+        scanf(" %c", &lixo);
     } while (opcao < 0 || opcao > 4);
 }
 
