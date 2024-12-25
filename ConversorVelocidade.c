@@ -2,6 +2,8 @@
     Conversor de Velocidade
 */
 
+extern char lixo;
+
 char *unidadeVelocidade(int value)
 {
     switch (value)
@@ -30,6 +32,7 @@ int conversorVelocidade()
     printf("3. mph\n");
     printf("Opcao: ");
     scanf("%d", &entrada);
+    system("cls");
 
     printf("\nSelecione a unidade de saida: \n");
     printf("1. km/h\n");
@@ -37,9 +40,11 @@ int conversorVelocidade()
     printf("3. mph\n");
     printf("Opcao: ");
     scanf("%d", &saida);
+    system("cls");
 
     printf("\nValor da velocidade: ");
     scanf("%f", &velocidade);
+    system("cls");
 
     switch (entrada)
     {
@@ -81,6 +86,11 @@ int conversorVelocidade()
 
     printf("O valor convertido eh: %.2f %s\n", resultado, unidadeVelocidade(saida));
     printf("(convertido de %.2f %s)\n", velocidade, unidadeVelocidade(entrada));
+
+    while ((getchar()) != '\n')
+        ;
+    printf("Digite algo para continuar...\n");
+    scanf(" %c", &lixo);
 
     return 0;
 }

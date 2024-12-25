@@ -1,3 +1,5 @@
+extern char lixo;
+
 float convertArea(float value, int type)
 {
     switch (type)
@@ -22,17 +24,20 @@ void conversorArea()
     printf("2. Centimetros quadrados(cm2) para metros quadrados(m2)\n");
 
     scanf("%d", &option);
+    system("cls");
     switch (option)
     {
     case 1:
         printf("Insira a area em metros quadrados: (sera convertido para cm2)\n");
         scanf("%f", &value);
+        system("cls");
         result = convertArea(value, 1);
         printf("Resultado: %.3f cm2\n", result);
         break;
     case 2:
         printf("Insira a area em centimetros quadrados: (sera convertido para m2)\n");
         scanf("%f", &value);
+        system("cls");
         result = convertArea(value, 2);
         printf("Resultado: %.3f m2\n", result);
         break;
@@ -40,4 +45,9 @@ void conversorArea()
         printf("[ERROR] Opcao invalida!\n");
         break;
     };
+
+    while ((getchar()) != '\n')
+        ;
+    printf("Digite algo para continuar...\n");
+    scanf(" %c", &lixo);
 }

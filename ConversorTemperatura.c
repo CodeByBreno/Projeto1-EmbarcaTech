@@ -1,4 +1,4 @@
-#include <stdio.h>
+extern char lixo;
 
 char *unidadeTemperatura(int value)
 {
@@ -28,6 +28,7 @@ void conversorTemperatura()
     printf("3. Kelvin\n");
     printf("Opcao: ");
     scanf("%d", &unidade_origem);
+    system("cls");
 
     printf("\nEscolha a unidade de destino:\n");
     printf("1. Celsius\n");
@@ -35,9 +36,11 @@ void conversorTemperatura()
     printf("3. Kelvin\n");
     printf("Opcao: ");
     scanf("%d", &unidade_destino);
+    system("cls");
 
     printf("\nDigite o valor da temperatura: ");
     scanf("%f", &temperatura);
+    system("cls");
 
     if (unidade_origem == unidade_destino)
     {
@@ -83,7 +86,12 @@ void conversorTemperatura()
     }
 
     printf("\nResultado: %.2f %s\n", resultado, unidadeTemperatura(unidade_destino));
-    printf("(valor original: %.2f %s)", temperatura, unidadeTemperatura(unidade_origem));
+    printf("(valor original: %.2f %s)\n", temperatura, unidadeTemperatura(unidade_origem));
+
+    while ((getchar()) != '\n')
+        ;
+    printf("Digite algo para continuar...\n");
+    scanf(" %c", &lixo);
 }
 
 // int main()

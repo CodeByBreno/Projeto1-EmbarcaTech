@@ -1,3 +1,29 @@
+extern char lixo;
+
+char *unitEquivalentComprimento(int number)
+{
+    switch (number)
+    {
+    case 1:
+        return "Km";
+    case 2:
+        return "Hm";
+    case 3:
+        return "Dam";
+    case 4:
+        return "m";
+    case 5:
+        return "dm";
+    case 6:
+        return "cm";
+    case 7:
+        return "mm";
+    default:
+        printf("[ERROR] Equivalent Length unit not present\n");
+        break;
+    }
+}
+
 int selecionarUnidade()
 {
     int unidade;
@@ -10,6 +36,7 @@ int selecionarUnidade()
     printf("7 - Milimetro (mm)\n");
 
     scanf("%d", &unidade);
+    system("cls");
     return unidade;
 }
 
@@ -42,6 +69,7 @@ void conversorComprimento()
     {
         printf("Digite o valor a ser convertido: \n");
         scanf("%f", &ValorInicial);
+        system("cls");
         if (ValorInicial <= 0)
         {
             system("cls");
@@ -71,6 +99,11 @@ void conversorComprimento()
     resultado = convertLength(ValorInicial, UnidadeInicial, UnidadeConversao);
 
     system("cls");
-    printf("Numero inicial: %f\n", ValorInicial);
-    printf("Numero final: %f\n", resultado);
+    printf("Numero inicial: %f %s\n", ValorInicial, unitEquivalentComprimento(UnidadeInicial));
+    printf("Numero final: %f %s\n", resultado, unitEquivalentComprimento(UnidadeConversao));
+
+    while ((getchar()) != '\n')
+        ;
+    printf("Digite algo para continuar...\n");
+    scanf(" %c", &lixo);
 }

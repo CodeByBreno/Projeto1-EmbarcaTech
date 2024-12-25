@@ -4,14 +4,17 @@
 #include <locale.h>
 
 #include "ConversorComprimento.c"
+#include "ConversorMassa.c"
 #include "ConversorVolume.c"
 #include "ConversorTemperatura.c"
 #include "ConversorVelocidade.c"
 #include "ConversorPotencia.c"
 #include "ConversorArea.c"
+#include "ConversorTempo.c"
 
 int running = 1;
 int convertionOption = 0;
+char lixo;
 
 void menuConvertion()
 {
@@ -26,6 +29,7 @@ void menuConvertion()
     printf("8. Unidades de tempo (segundos, minutos, horas)\n");
 
     scanf("%d", &convertionOption);
+    system("cls");
 }
 
 void selectConvertion()
@@ -36,7 +40,7 @@ void selectConvertion()
         conversorComprimento();
         break;
     case 2:
-        printf("Em desenvolvimento...\n");
+        conversorMassa();
         break;
     case 3:
         conversorVolume();
@@ -54,17 +58,20 @@ void selectConvertion()
         conversorArea();
         break;
     case 8:
-        printf("Em desenvolvimento...\n");
+        conversorTempo();
         break;
     default:
         printf("Opcao invalida!\n");
         break;
     }
+    system("cls");
 }
 
 void menuExit()
 {
     char answer;
+    while ((getchar()) != '\n')
+        ;
     printf("\nDeseja realizar outra conversao ? [Y/n]\n");
     scanf(" %c", &answer);
     if (answer != 'Y')

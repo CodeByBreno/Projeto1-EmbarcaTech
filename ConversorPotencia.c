@@ -4,6 +4,8 @@ CONVERSOR DE UNIDADES DE POTÊNCIA
 
 */
 
+extern char lixo;
+
 void conversorPotencia();
 void WattsKilowatts(float watts);
 void KillowattsWatts(float kilowatts);
@@ -81,6 +83,9 @@ void conversorPotencia()
             printf("Entrada invalida! Por favor, escolha uma das conversoes indicadas.\n");
             break;
         }
+
+        printf("Digite algo para continuar...\n");
+        scanf("%c", &lixo);
     } while (opcao < 0 || opcao > 4);
 }
 

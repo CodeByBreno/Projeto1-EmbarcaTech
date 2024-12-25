@@ -1,20 +1,20 @@
-#include <stdio.h>
+extern char lixo;
 
 void litrosParaOutros(double litros)
 {
     printf("\n%.2f litros equivalem a:\n", litros);
     printf("- %.2f mililitros\n", litros * 1000);
-    printf("- %.6f metros cúbicos\n", litros / 1000);
+    printf("- %.6f metros cubicos\n", litros / 1000);
 }
 void mililitrosParaOutros(double mililitros)
 {
     printf("\n%.2f mililitros equivalem a:\n", mililitros);
     printf("- %.2f litros\n", mililitros / 1000);
-    printf("- %.9f metros cúbicos\n", mililitros / 1000000);
+    printf("- %.9f metros cubicos\n", mililitros / 1000000);
 }
 void metrosCubicosParaOutros(double metrosCubicos)
 {
-    printf("\n%.6f metros cúbicos equivalem a:\n", metrosCubicos);
+    printf("\n%.6f metros cubicos equivalem a:\n", metrosCubicos);
     printf("- %.2f litros\n", metrosCubicos * 1000);
     printf("- %.2f mililitros\n", metrosCubicos * 1000000);
 }
@@ -25,13 +25,14 @@ int conversorVolume()
 
     printf("Conversor de Valores de Volume\n");
     printf("Escolha uma opcao:\n");
-    printf("1 - Litros para Mililitros e Metros Cúbicos\n");
-    printf("2 - Mililitros para Litros e Metros Cúbicos\n");
-    printf("3 - Metros Cúbicos para Litros e Mililitros\n");
+    printf("1 - Litros para Mililitros e Metros Cubicos\n");
+    printf("2 - Mililitros para Litros e Metros Cubicos\n");
+    printf("3 - Metros Cubicos para Litros e Mililitros\n");
     printf("0 - Sair\n");
 
     printf("\nDigite sua opcao: ");
     scanf("%d", &opcao);
+    system("cls");
 
     switch (opcao)
     {
@@ -48,7 +49,7 @@ int conversorVolume()
         break;
 
     case 3:
-        printf("Digite o valor em metros cúbicos: ");
+        printf("Digite o valor em metros cubicoss: ");
         scanf("%lf", &valor);
         metrosCubicosParaOutros(valor);
         break;
@@ -56,6 +57,11 @@ int conversorVolume()
     default:
         printf("Opcao invalida\n");
     }
+
+    while ((getchar()) != '\n')
+        ;
+    printf("Digite algo para continuar...\n");
+    scanf(" %c", &lixo);
 
     return 0;
 }
