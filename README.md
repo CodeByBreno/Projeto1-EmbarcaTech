@@ -4,7 +4,7 @@ Projeto inicial desenvolvido em grupo para a etapa inicial do EmbarcaTech 2024
 Consiste em um software de conversão de unidades escrito em C. O objetivo, além da conversão, é exercitar o uso de git/github e o trabalho colaborativo
 <br>
 Agradecimentos aos devs que participaram:
-- **Breno Gabriel** - Unidades de Área e integração dos códigos
+- **Breno Gabriel** - Unidades de Área e Integração dos códigos
 - **Caíque César do Vale Matos** - Unidades de Velocidade
 - **Felipe Santana Carmo** - Unidades de Comprimento
 - **Felipe Silva Pires** - Unidades de Temperatura
@@ -21,8 +21,8 @@ Agradecimentos aos devs que participaram:
 </div>
 
 <div align="center">
-<img src="https://github.com/user-attachments/assets/5be02f11-6fe6-430e-9b7c-cda90efa9370" width=600>
-<p><strong>Figura 2.</strong> Interface Inicial da aplicaçãos</p>
+<img src="https://github.com/user-attachments/assets/eaf49e40-9112-4cb8-a902-0cd47125cb14" width=600>
+<p><strong>Figura 2.</strong> Interface da aplicaçãos</p>
 </div>
 
 ## Especificações do Projeto:
@@ -35,14 +35,14 @@ Agradecimentos aos devs que participaram:
 
 Como o software foi construído em C, ele é compilado nativamente. Para executa-lo, basta rodar o executável main.exe (que se encontra na pasta /output)<br>
 <br>
-![image](https://github.com/user-attachments/assets/7820e86e-91d1-4acf-953d-5f47f3dad594)
+![image](https://github.com/user-attachments/assets/9294550f-a0d0-44ca-9779-b43871f70771)
 
 # 🧩 Como funciona o programa?
 
 O software construido apresenta uma interface via terminal, onde o usuário deve, inicialmente, inserir o número correspondente ao tipo de conversão que deseja realizar:
 
 <p align="center">
-<img src="https://github.com/user-attachments/assets/7c67f995-eff2-404b-9a52-71e7651f1ca9" width=700>
+<img src="https://github.com/user-attachments/assets/5f0a9553-584a-4b1b-a7e6-9f4c34de455d" width=700>
 </p>
 
 Acima, o usuário tem ao todo 7 opções de conversão diferentes. Para selecionar uma delas, ele deve digitar o número correspondente e apertar em Enter. Digamos que a escolhida foi velocidade:
