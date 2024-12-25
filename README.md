@@ -1,4 +1,4 @@
-# Sistema de Conversões - EmbarcaTech 🔷💻📊
+# 🔷💻📊 Sistema de Conversões - EmbarcaTech 
 
 Projeto inicial desenvolvido em grupo para a etapa inicial do EmbarcaTech 2024
 Consiste em um software de conversão de unidades escrito em C. O objetivo, além da conversão, é exercitar o uso de git/github e o trabalho colaborativo
