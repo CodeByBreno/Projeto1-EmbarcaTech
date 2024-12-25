@@ -46,8 +46,5 @@ void conversorArea()
         break;
     };
 
-    while ((getchar()) != '\n')
-        ;
-    printf("Digite algo para continuar...\n");
-    scanf(" %c", &lixo);
+    pressToContinue();
 }

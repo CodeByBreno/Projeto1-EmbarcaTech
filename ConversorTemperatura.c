@@ -88,10 +88,7 @@ void conversorTemperatura()
     printf("\nResultado: %.2f %s\n", resultado, unidadeTemperatura(unidade_destino));
     printf("(valor original: %.2f %s)\n", temperatura, unidadeTemperatura(unidade_origem));
 
-    while ((getchar()) != '\n')
-        ;
-    printf("Digite algo para continuar...\n");
-    scanf(" %c", &lixo);
+    pressToContinue();
 }
 
 // int main()

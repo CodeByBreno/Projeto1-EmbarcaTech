@@ -58,10 +58,7 @@ int conversorVolume()
         printf("Opcao invalida\n");
     }
 
-    while ((getchar()) != '\n')
-        ;
-    printf("Digite algo para continuar...\n");
-    scanf(" %c", &lixo);
+    pressToContinue();
 
     return 0;
 }

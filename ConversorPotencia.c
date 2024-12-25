@@ -4,6 +4,7 @@ CONVERSOR DE UNIDADES DE POTÊNCIA
 
 */
 
+#include "utils.h"
 extern char lixo;
 
 void conversorPotencia();

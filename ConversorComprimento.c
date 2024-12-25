@@ -1,3 +1,4 @@
+#include "utils.h"
 extern char lixo;
 
 char *unitEquivalentComprimento(int number)
@@ -54,6 +55,8 @@ void conversorComprimento()
 
     do
     {
+        flushStdin();
+
         printf("Selecione a unidade do valor original: \n");
         UnidadeInicial = selecionarUnidade();
         if (UnidadeInicial < 1 || UnidadeInicial > 7)
@@ -67,12 +70,13 @@ void conversorComprimento()
 
     do
     {
+        flushStdin();
+
         printf("Digite o valor a ser convertido: \n");
         scanf("%f", &ValorInicial);
         system("cls");
         if (ValorInicial <= 0)
         {
-            system("cls");
             printf("Valor nulo ou invalido tente novamente\n");
         }
     } while (ValorInicial <= 0);
@@ -81,6 +85,8 @@ void conversorComprimento()
 
     do
     {
+        flushStdin();
+
         printf("Selecione a unidade em que o valor sera convertido:\n");
         UnidadeConversao = selecionarUnidade();
         if (UnidadeConversao < 1 || UnidadeConversao > 7)
@@ -102,8 +108,5 @@ void conversorComprimento()
     printf("Numero inicial: %f %s\n", ValorInicial, unitEquivalentComprimento(UnidadeInicial));
     printf("Numero final: %f %s\n", resultado, unitEquivalentComprimento(UnidadeConversao));
 
-    while ((getchar()) != '\n')
-        ;
-    printf("Digite algo para continuar...\n");
-    scanf(" %c", &lixo);
+    pressToContinue();
 }

@@ -53,6 +53,23 @@ float converter_massa(float valor, char unidade_origem[], char unidade_destino[]
     return valor_convertido;
 }
 
+int isValidMassUnit(char *unit)
+{
+    if (strcmp(unit, "grama"))
+    {
+        return 1;
+    }
+    if (strcmp(unit, "quilograma"))
+    {
+        return 1;
+    }
+    if (strcmp(unit, "tonelada"))
+    {
+        return 1;
+    }
+    return 0;
+}
+
 int conversorMassa()
 {
     float valor, resultado;
@@ -64,13 +81,19 @@ int conversorMassa()
     printf("Digite o valor a ser convertido: ");
     scanf("%f", &valor);
 
-    printf("\nEscolha uma das unidades: quilograma, grama, tonelada\n");
-    printf("Digite a unidade de origem: ");
-    scanf("%s", unidade_origem);
+    do
+    {
+        printf("\nEscolha uma das unidades: quilograma, grama, tonelada\n");
+        printf("Digite a unidade de origem: ");
+        scanf("%s", unidade_origem);
+    } while (!isValidMassUnit(unidade_origem));
 
-    printf("\nEscolha uma das unidades: quilograma, grama, tonelada\n");
-    printf("Digite a unidade de destino: ");
-    scanf("%s", unidade_destino);
+    do
+    {
+        printf("\nEscolha uma das unidades: quilograma, grama, tonelada\n");
+        printf("Digite a unidade de destino: ");
+        scanf("%s", unidade_destino);
+    } while (!isValidMassUnit(unidade_destino));
 
     system("cls");
 
@@ -79,17 +102,14 @@ int conversorMassa()
 
     if (resultado == -1)
     {
-        printf("Unidade inválida! Escolha entre: quilograma, grama ou tonelada.\n");
+        printf("Erro ao realizar conversão!\n");
     }
     else
     {
         printf("%.2f %ss equivalem a %.2f %ss.\n", valor, unidade_origem, resultado, unidade_destino);
     }
 
-    while ((getchar()) != '\n')
-        ;
-    printf("Digite algo para continuar...\n");
-    scanf(" %c", &lixo);
+    pressToContinue();
 
     return 0;
 }

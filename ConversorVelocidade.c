@@ -87,10 +87,7 @@ int conversorVelocidade()
     printf("O valor convertido eh: %.2f %s\n", resultado, unidadeVelocidade(saida));
     printf("(convertido de %.2f %s)\n", velocidade, unidadeVelocidade(entrada));
 
-    while ((getchar()) != '\n')
-        ;
-    printf("Digite algo para continuar...\n");
-    scanf(" %c", &lixo);
+    pressToContinue();
 
     return 0;
 }

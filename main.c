@@ -3,6 +3,9 @@
 #include <math.h>
 #include <locale.h>
 
+#include "utils.h"
+
+#include "utils.c"
 #include "ConversorComprimento.c"
 #include "ConversorMassa.c"
 #include "ConversorVolume.c"
