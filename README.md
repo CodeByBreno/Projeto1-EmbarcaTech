@@ -4,13 +4,13 @@ Projeto inicial desenvolvido em grupo para a etapa inicial do EmbarcaTech 2024
 Consiste em um software de conversão de unidades escrito em C. O objetivo, além da conversão, é exercitar o uso de git/github e o trabalho colaborativo
 <br>
 Agradecimentos aos devs que participaram:
+- **Alisson Lívio Rocha Costa** - Unidades de Potência
 - **Breno Gabriel** - Unidades de Área e Integração dos códigos
 - **Caíque César do Vale Matos** - Unidades de Velocidade
 - **Felipe Santana Carmo** - Unidades de Comprimento
 - **Felipe Silva Pires** - Unidades de Temperatura
 - **José Rivaldo Matias dos Santos** - Unidades de Tempo
 - **Lucas Seixas Cotrim de Souza** - Unidades de Volume
-
 - **Pablo Fernandes Costa de Marinho** - Unidades de Massa
 
 ## Imagens do projeto:
